@@ -3,9 +3,8 @@
 Uma aplicação de gerenciamento de tarefas que permite aos usuários criar, editar, concluir e excluir tarefas.
 
 ## 🚀 Tecnologias
-- HTML
-- CSS
-- JavaScript
+- React.js
+- TypeScript
 
 ## 📌 Funcionalidades
 - Adicionar novas tarefas
