@@ -44,6 +44,15 @@ export const updateTodo = mutation({
     },
 });
 
+export const deleteTodo = mutation({
+    args: { id: v.id("todos") },
+    handler: async (ctx, args) => {
+        const todo = await ctx.db.get(args.id);
+        if (!todo) throw new ConvexError("Todo not found");
+        await ctx.db.delete(args.id);
+    },
+});
+
 export const clearAllTodos = mutation({
     handler: async (ctx) => {
         const todos = await ctx.db.query("todos").collect();
